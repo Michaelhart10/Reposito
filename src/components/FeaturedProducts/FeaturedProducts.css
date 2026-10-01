@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg-primary: #fbf9f5;
+  --text-dark: #1f1a17;
+  --text-muted: #6e6761;
+  --accent-gold: #c5a059;
+  --border-light: #e8e3d9;
+  --font-serif: 'Cinzel', serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+.featured-section {
+  background-color: var(--bg-primary);
+  padding: 80px 40px;
+  border-top: 1px solid var(--border-light);
+}
+
+.featured-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Header */
+.featured-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.featured-label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: var(--accent-gold);
+  display: block;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.featured-heading {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--text-dark);
+  letter-spacing: -0.01em;
+}
+
+/* Responsive Grid System */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+  gap: 32px;
+  margin-bottom: 60px;
+}
+
+/* Footer Button */
+.featured-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.view-all-btn {
+  display: inline-block;
+  padding: 16px 40px;
+  background-color: transparent;
+  color: var(--text-dark);
+  border: 1px solid var(--text-dark);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: var(--text-dark);
+  color: #ffffff;
+}
+
+/* ---------------- RESPONSIVE BREAKPOINTS ---------------- */
+
+/* Tablet View: 2 Columns */
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .featured-heading {
+    font-size: 30px;
+  }
+}
+
+/* Mobile View: 1 Column */
+@media (max-width: 600px) {
+  .featured-section {
+    padding: 60px 20px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .featured-heading {
+    font-size: 26px;
+  }
+
+  .view-all-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

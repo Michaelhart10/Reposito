@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg-primary: #fbf9f5;
+  --bg-dark: #191614;
+  --text-dark: #1f1a17;
+  --text-muted: #8c857b;
+  --accent-gold: #c5a059;
+  --border-dark: #2c2723;
+  --font-serif: 'Cinzel', serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+.cta-section {
+  background-color: var(--bg-dark);
+  color: #ffffff;
+  padding: 100px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--border-dark);
+}
+
+.cta-container {
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Header */
+.cta-label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  color: var(--accent-gold);
+  display: block;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.cta-heading {
+  font-family: var(--font-serif);
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.cta-description {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.7;
+  color: #b5ad9e;
+  margin-bottom: 40px;
+}
+
+/* Form Styling */
+.cta-form-wrapper {
+  width: 100%;
+}
+
+.cta-form {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.input-group {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 18px;
+  color: #8c857b;
+  pointer-events: none;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 16px 18px 16px 48px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-dark);
+  border-radius: 2px;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input-group input::placeholder {
+  color: #736b62;
+}
+
+.input-group input:focus {
+  border-color: var(--accent-gold);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.subscribe-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--accent-gold);
+  color: #ffffff;
+  border: 1px solid var(--accent-gold);
+  padding: 16px 32px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.subscribe-btn:hover {
+  background-color: #d6b26a;
+  border-color: #d6b26a;
+  transform: translateY(-1px);
+}
+
+.cta-privacy-note {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: #6e6761;
+  margin-top: 16px;
+}
+
+/* Success Feedback State */
+.cta-success-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+  background-color: rgba(197, 160, 89, 0.15);
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 2px;
+}
+
+.success-icon {
+  color: var(--accent-gold);
+}
+
+/* ---------------- RESPONSIVE BREAKPOINTS ---------------- */
+
+@media (max-width: 640px) {
+  .cta-section {
+    padding: 70px 20px;
+  }
+
+  .cta-heading {
+    font-size: 28px;
+  }
+
+  .cta-description {
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+
+  /* Stack input and button vertically on mobile */
+  .cta-form {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .subscribe-btn {
+    width: 100%;
+    padding: 16px;
+  }
+}
