@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Search, ShoppingBag, Heart, User, ChevronDown, 
   ChevronUp, X, ArrowRight, Menu 
@@ -174,13 +175,14 @@ const Navbar = () => {
 
             {/* <a href="#bespoke" className="nav-link">BESPOKE</a> */}
             <a href="#heritage" className="nav-link">OUR HERITAGE</a>
+            <Link to="/shop" className="nav-link">SHOP</Link>
           </nav>
 
           {/* Center Brand Logo */}
           <div className="navbar-logo-wrapper">
-            <a href="/" className="navbar-logo">
+            <Link to="/" className="navbar-logo">
               MIC & JAYS
-            </a>
+            </Link>
             <span className="logo-subtext">LONDON • EST. 2026</span>
           </div>
 
